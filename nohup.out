@@ -1,0 +1,45 @@
+[2024-10-17 20:13:47 +0800] [1801555] [INFO] Starting gunicorn 23.0.0
+[2024-10-17 20:13:47 +0800] [1801555] [INFO] Listening at: unix:/tmp/aikb.sock (1801555)
+[2024-10-17 20:13:47 +0800] [1801555] [INFO] Using worker: sync
+[2024-10-17 20:13:47 +0800] [1801559] [INFO] Booting worker with pid: 1801559
+[2024-10-17 20:13:47 +0800] [1801560] [INFO] Booting worker with pid: 1801560
+[2024-10-17 20:13:47 +0800] [1801561] [INFO] Booting worker with pid: 1801561
+[2024-10-17 20:17:21 +0800] [1801560] [INFO] Worker exiting (pid: 1801560)
+[2024-10-17 20:17:21 +0800] [1801555] [INFO] Handling signal: term
+[2024-10-17 20:17:21 +0800] [1801559] [INFO] Worker exiting (pid: 1801559)
+[2024-10-17 20:17:21 +0800] [1801561] [INFO] Worker exiting (pid: 1801561)
+[2024-10-17 20:17:21 +0800] [1801555] [ERROR] Worker (pid:1801561) was sent SIGTERM!
+[2024-10-17 20:17:22 +0800] [1801604] [INFO] Starting gunicorn 23.0.0
+[2024-10-17 20:17:22 +0800] [1801604] [INFO] Listening at: http://127.0.0.1:8002 (1801604)
+[2024-10-17 20:17:22 +0800] [1801604] [INFO] Using worker: sync
+[2024-10-17 20:17:22 +0800] [1801608] [INFO] Booting worker with pid: 1801608
+[2024-10-17 20:17:22 +0800] [1801609] [INFO] Booting worker with pid: 1801609
+[2024-10-17 20:17:22 +0800] [1801555] [INFO] Shutting down: Master
+[2024-10-17 20:17:22 +0800] [1801610] [INFO] Booting worker with pid: 1801610
+[2024-10-17 20:19:50,317] ERROR in app: Exception on /upload [POST]
+Traceback (most recent call last):
+  File "/root/AIKB/aikb_env/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/root/AIKB/aikb_env/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/root/AIKB/aikb_env/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/root/AIKB/aikb_env/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/root/AIKB/aikb_env/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/AIKB/app/routes.py", line 38, in upload_file
+    file.save(file_path)
+  File "/root/AIKB/aikb_env/lib/python3.10/site-packages/werkzeug/datastructures/file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+FileNotFoundError: [Errno 2] No such file or directory: '/root/AIKB/uploads/serv00.txt'
+[2024-10-17 20:40:42 +0800] [1801604] [ERROR] Worker (pid:1801610) was sent SIGHUP!
+[2024-10-17 20:40:42 +0800] [1801775] [INFO] Booting worker with pid: 1801775
+[2024-10-17 20:40:42 +0800] [1801604] [ERROR] Worker (pid:1801608) was sent SIGHUP!
+[2024-10-17 20:40:42 +0800] [1801604] [ERROR] Worker (pid:1801609) was sent SIGHUP!
+[2024-10-17 20:40:42 +0800] [1801604] [INFO] Handling signal: hup
+[2024-10-17 20:40:42 +0800] [1801604] [INFO] Hang up: Master
+[2024-10-17 20:40:42 +0800] [1801778] [INFO] Booting worker with pid: 1801778
+[2024-10-17 20:40:42 +0800] [1801777] [INFO] Booting worker with pid: 1801777
+[2024-10-17 20:40:42 +0800] [1801776] [INFO] Booting worker with pid: 1801776
+[2024-10-17 20:40:42 +0800] [1801775] [INFO] Worker exiting (pid: 1801775)

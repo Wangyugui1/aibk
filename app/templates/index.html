@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}首页{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">欢迎来到 AIKB</h1>
+    <p class="lead">AIKB 是一个智能知识库系统,可以帮助您管理和查询您的文档。</p>
+    <hr class="my-4">
+    <p>立即注册或登录以开始使用。</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('auth.register') }}" role="button">注册</a>
+    <a class="btn btn-secondary btn-lg" href="{{ url_for('auth.login') }}" role="button">登录</a>
+</div>
+{% endblock %}
