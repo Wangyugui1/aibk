@@ -12,14 +12,16 @@ AIKB/
 │   │   └── js/
 │   │       └── main.js
 │   └── templates/
-│       ├── base.html
-│       ├── index.html
-│       ├── login.html
-│       ├── register.html
-│       └── dashboard.html
+│   |   ├── base.html
+│   |   ├── index.html
+│   |   ├── login.html
+│   |   ├── register.html
+│   |   └── dashboard.html
+|   |___uploads
 ├── config.py
 ├── requirements.txt
-└── run.py
+|——— run.py
+|————.env
 ```
 
 ## 1. 环境准备
