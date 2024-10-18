@@ -1,5 +1,27 @@
 # AIKB 项目部署说明
 
+### 本项目目录结构：
+
+```
+AIKB/
+├── app/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── routes.py
+│   ├── static/
+│   │   └── js/
+│   │       └── main.js
+│   └── templates/
+│       ├── base.html
+│       ├── index.html
+│       ├── login.html
+│       ├── register.html
+│       └── dashboard.html
+├── config.py
+├── requirements.txt
+└── run.py
+```
+
 ## 1. 环境准备
 
 - 安装 Python 3.10 或更高版本
