@@ -2,13 +2,82 @@
 
 {% block title %}首页{% endblock %}
 
+{% block extra_css %}
+<style>
+    /* 自定义首页样式 */
+    .jumbotron {
+        background-color: #ecf0f1;
+        border-radius: 10px;
+        padding: 2rem;
+    }
+    .feature-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #3498db;
+    }
+</style>
+{% endblock %}
+
 {% block content %}
+<!-- 主要内容区 -->
 <div class="jumbotron">
     <h1 class="display-4">欢迎来到 AIKB</h1>
     <p class="lead">AIKB 是一个智能知识库系统,可以帮助您管理和查询您的文档。</p>
     <hr class="my-4">
     <p>立即注册或登录以开始使用。</p>
-    <a class="btn btn-primary btn-lg" href="{{ url_for('auth.register') }}" role="button">注册</a>
-    <a class="btn btn-secondary btn-lg" href="{{ url_for('auth.login') }}" role="button">登录</a>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('auth.register') }}" role="button">
+        <i class="fas fa-user-plus"></i> 注册
+    </a>
+    <a class="btn btn-secondary btn-lg" href="{{ url_for('auth.login') }}" role="button">
+        <i class="fas fa-sign-in-alt"></i> 登录
+    </a>
+</div>
+
+<!-- 特性介绍 -->
+<div class="row mt-5">
+    <div class="col-md-4 text-center">
+        <i class="fas fa-search feature-icon"></i>
+        <h3>智能搜索</h3>
+        <p>使用先进的AI技术,快速准确地找到您需要的信息。</p>
+    </div>
+    <div class="col-md-4 text-center">
+        <i class="fas fa-cloud-upload-alt feature-icon"></i>
+        <h3>轻松上传</h3>
+        <p>支持多种文件格式,轻松上传和管理您的文档。</p>
+    </div>
+    <div class="col-md-4 text-center">
+        <i class="fas fa-chart-line feature-icon"></i>
+        <h3>数据分析</h3>
+        <p>深入分析您的文档,提供有价值的见解和报告。</p>
+    </div>
+</div>
+
+<!-- 用户评价 -->
+<div class="row mt-5">
+    <h2 class="text-center mb-4">用户评价</h2>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">"AIKB大大提高了我的工作效率,强烈推荐!"</p>
+                <footer class="blockquote-footer">张三, 项目经理</footer>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">"使用AIKB后,我再也不用担心找不到重要文档了。"</p>
+                <footer class="blockquote-footer">李四, 研究员</footer>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">"AIKB的智能分析功能帮助我发现了许多有价值的信息。"</p>
+                <footer class="blockquote-footer">王五, 数据分析师</footer>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
